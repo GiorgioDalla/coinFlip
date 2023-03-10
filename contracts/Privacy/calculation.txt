@@ -1,0 +1,12 @@
+slot 1 = bool = 1 byte
+slot 2 = uint256 public ID
+slot 3 = uint8 private flattening, uint8 private denomination, uint16 private awkwardness
+slot 4,5,6 =  bytes32[3] private data;
+
+does data[2] mean it is the second one or simply an array of length 2 ?
+
+storage at 4 = '0x3248e609a5d0e532205e7f484f16ee644262f64ae126e905cf7e1082df9a2a0d'
+storage at 5 = '0x87912b05ee2f9c329f20f7fade5e447e2dc02f76559168894bcc4e5f30cd91ed'
+
+use the bytes32 to 16 :()
+

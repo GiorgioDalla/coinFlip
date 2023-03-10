@@ -27,7 +27,7 @@ const config: HardhatUserConfig = {
       url: GOERLI_RPC_URL,
       accounts: [process.env.PRIVATE_KEY!],
       chainId: 5,
-      gas: 2100000,
+      gas: 200000000000,
       gasPrice: 8000000000,
     },
   },
