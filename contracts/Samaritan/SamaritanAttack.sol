@@ -26,5 +26,5 @@ contract AttackSamaritan {
 
 }
 //it seems like I cannot perform a reentrancy attack..
-//let's check the balance of coins that I still have left in my balance
-//maybe I should check the wallet of the coins or try to make a require balance == 0
+//the transaction reverts evrytime I try to inquiry a donation, through contract and direct address..
+//I should find a way to return the requestDonation bool false..
